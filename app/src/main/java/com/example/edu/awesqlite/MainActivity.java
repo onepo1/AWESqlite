@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.btn_update:
-                mdb.execSQL("UPDATE awe_country SET capital='seoul' WHERE country='korea';");
+                mdb.execSQL("UPDATE awe_country SET capital='seoul' WHERE country='eee';");
                 query = "SELECT * FROM awe_country ";
                 cursor = mdb.rawQuery(query,null);
 
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.btn_delete:
-                mdb.execSQL("delete from awe_country where country='ccc';");
+                mdb.execSQL("delete from awe_country where country='ggg';");
                 query = "SELECT * FROM awe_country order by _id desc ";
                 cursor = mdb.rawQuery(query,null);
 
