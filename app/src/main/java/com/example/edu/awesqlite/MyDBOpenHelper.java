@@ -20,11 +20,13 @@ public class MyDBOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE awe_country (_id INTEGER PRIMARY KEY AUTOINCREMENT, country TEXT, capital TEXT);");
-
-        for(int i=0; i<10; i++){
-            db.execSQL("INSERT INTO awe_country VALUES( null, '" + "Country"+ i + "', '" + "Capital" + i + "');");
-        }
+//        db.execSQL("CREATE TABLE awe_country (_id INTEGER PRIMARY KEY AUTOINCREMENT, country TEXT, capital TEXT);");
+//
+//        for(int i=0; i<10; i++){
+//            db.execSQL("INSERT INTO awe_country VALUES( null, '" + "Country"+ i + "', '" + "Capital" + i + "');");
+//        }
+        db.execSQL("CREATE TABLE awe_country (pkid TEXT PRIMARY KEY, country TEXT, capital TEXT);");
+        db.execSQL("CREATE TABLE awe_country_visitedcount (fkid TEXT);");
     }
 
     @Override
